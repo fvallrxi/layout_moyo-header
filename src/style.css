@@ -1,3 +1,98 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Roboto, serif;
+
+  --color: #00acdc;
+}
+
+:root {
+  --text-color-hover: #00acdc;
+}
+
+header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.logo_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo_img {
+  position: absolute;
+  left: 50px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.nav {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.nav_list {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_item {
+  margin-right: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav_link {
+  height: 60px;
+  line-height: 60px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav_item:nth-child(n + 2) {
+  margin-right: 20px;
+}
+
+.nav_item:last-child {
+  margin-right: 0;
+}
+
+.nav_link:hover {
+  color: var(--text-color-hover);
+}
+
+.nav_link.is-active {
+  color: var(--text-color-hover);
+}
+
+.is-active {
+  position: relative;
+  color: var(--text-color-hover);
+  margin: 0;
+}
+
+.nav_link.is-active::after {
+  position: relative;
+  bottom: 4px;
+  content: '';
+  display: block;
+  background-color: var(--color);
+  height: 4px;
+  border-radius: 8px;
 }
